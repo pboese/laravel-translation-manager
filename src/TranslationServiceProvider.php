@@ -4,6 +4,12 @@ use Illuminate\Translation\TranslationServiceProvider as BaseTranslationServiceP
 
 class TranslationServiceProvider extends BaseTranslationServiceProvider {
 
+    public function boot()
+    {
+        $this->publishes([
+            __DIR__ . '/public/translations-manager' => public_path('vendor/translations-manager'),
+        ], 'public');
+    }
 
     /**
      * Register the service provider.
