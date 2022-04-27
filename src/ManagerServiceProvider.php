@@ -68,7 +68,7 @@ class ManagerServiceProvider extends ServiceProvider {
         ], 'translations-manager-views');
 
         $this->publishes([
-            __DIR__ . '/public/translations-manager' => public_path('vendor/translations-manager'),
+            __DIR__ . '/../public/translations-manager' => public_path('vendor/translations-manager'),
         ], 'translations-manager-css-js');
 
         $migrationPath = __DIR__.'/../database/migrations';
