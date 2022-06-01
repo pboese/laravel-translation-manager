@@ -144,6 +144,8 @@ $deleteEnabled = false;
 
     <p>
         <?php if(!isset($group)) : ?>
+        <p>Translations must be imported via console for performance reasons. Please ask Pelle (pelle.boese@cannavigia.com) to trigger it.</p>
+        <!--
         <form class="form-import" onsubmit="$('#show_groups').hide();" method="POST" action="<?php echo action('\Barryvdh\TranslationManager\Controller@postImport') ?>" data-remote="true" role="form">
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <input type="hidden" name="replace" value="0">
@@ -151,6 +153,7 @@ $deleteEnabled = false;
                 <button type="submit" class="btn btn-primary" data-disable-with="Loading...">Import new translations</button>
             </div>
         </form>
+        -->
         <?php endif; ?>
 
         <div class="checkbox">
