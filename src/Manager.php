@@ -74,6 +74,8 @@ class Manager
             }
             $vendorName = $this->files->name($this->files->dirname($langPath));
             foreach ($this->files->allfiles($langPath) as $file) {
+                dump($file->path);
+
                 $info = pathinfo($file);
                 $group = $info['filename'];
                 if ($import_group) {
