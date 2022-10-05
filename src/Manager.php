@@ -74,7 +74,7 @@ class Manager
             }
             $vendorName = $this->files->name($this->files->dirname($langPath));
             foreach ($this->files->allfiles($langPath) as $file) {
-                dump($file->path);
+                dump($file->getPathName());
 
                 $info = pathinfo($file);
                 $group = $info['filename'];
